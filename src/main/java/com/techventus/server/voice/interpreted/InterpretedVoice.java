@@ -4,6 +4,7 @@
 package com.techventus.server.voice.interpreted;
 
 import java.io.IOException;
+import java.util.List;
 
 import com.techventus.server.voice.Voice;
 
@@ -13,14 +14,18 @@ import com.techventus.server.voice.Voice;
  * @author Alex Anderson <alex@frontlinesms.com>
  */
 public class InterpretedVoice {
+	/** {@link GvJsonParser} for this class */
+	private final GvJsonParser jsonParser = new GvJsonParser();
 	/** Instance of {@link Voice} that this {@link InterpretedVoice} wraps. */
 	private final Voice voice;
 	
+//> CONSTRUCTORS
 	/** Create a new {@link InterpretedVoice} wrapping {@link #voice} */
 	public InterpretedVoice(Voice voice) {
 		this.voice = voice;
 	}
 	
+//> PUBLIC METHODS
 	/**
 	 * Send an SMS
 	 * 
@@ -31,12 +36,21 @@ public class InterpretedVoice {
 	 *            character length will be split into multiple messages.
 	 * @return
 	 */
-	public SmsSendResponse sendSms(String destinationNumber, String txt) throws SmsSendException {
+	public GvSmsSendResponse sendSms(String destinationNumber, String txt) throws GvSmsSendException {
 		try {
 			String jsonResponse = voice.sendSMS(destinationNumber, txt);
-			return SmsSendResponse.getFromJsonResponse(jsonResponse);
+			return jsonParser.parseSendResponse(jsonResponse);
 		} catch (IOException ex) {
-			throw new SmsSendException(ex);
+			throw new GvSmsSendException(ex);
+		}
+	}
+	
+	public List<GvSmsMessage> receiveSms() throws GvSmsReceiveException {
+		try {
+			String jsonResponse = this.voice.getSMS();
+			return jsonParser.parseMessages(jsonResponse);
+		} catch (IOException ex) {
+			throw new GvSmsReceiveException(ex);
 		}
 	}
 }
