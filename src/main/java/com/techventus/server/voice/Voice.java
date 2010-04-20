@@ -30,12 +30,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import gvjava.org.json.JSONException;
 
@@ -1219,7 +1220,6 @@ public class Voice {
 		return result;
 	}
 	
-	
 	/**
 	 * HTML GET request for a given URL String and a given page number
 	 * 
@@ -1252,6 +1252,63 @@ public class Voice {
 		String result = sb.toString();
 
 		return result;
+	}
+	
+	/** Calls {@link #post(String, String, boolean)}, building a URL-encoded string of post data. */
+	String post(String urlString, Map<String, String> data, boolean parseAuthToken) throws IOException {
+		StringBuilder bob = new StringBuilder();
+		for(Entry<String, String> datum : data.entrySet()) {
+			bob.append('&');
+			bob.append(URLEncoder.encode(datum.getKey(), "UTF-8")); // TODO probably not necessary to URL-encode the keys, as they should be sensible anyway
+			bob.append('=');
+			bob.append(URLEncoder.encode(datum.getValue(), "UTF-8"));
+		}
+		return post(urlString, bob.substring(1), parseAuthToken);
+	}
+	
+	/** @return raw text response of the response to the POST request */
+	String post(String urlString, String data, boolean parseAuthToken) throws IOException {
+		// Send data
+		URL url = new URL(urlString);
+		URLConnection conn = url.openConnection();
+		conn.setRequestProperty("User-agent", USER_AGENT);
+		conn.setDoOutput(true);
+		
+		OutputStreamWriter wr = null;
+		BufferedReader rd = null;
+		
+		try {
+			wr = new OutputStreamWriter(conn.getOutputStream());
+			wr.write(data);
+			wr.flush();
+	
+			// Get the response
+			rd = new BufferedReader(new InputStreamReader(conn
+					.getInputStream()));
+			
+			String line;
+			StringBuilder bob = new StringBuilder();
+			while ((line = rd.readLine()) != null) {
+				bob.append(line);
+				bob.append('\n');
+				bob.append('\r'); // TODO why are these both required, and why are they in the order \n\r instead of \r\n ?
+				
+				if (parseAuthToken && line.contains("Auth=")) {
+					this.authToken = line.split("=", 2)[1].trim();
+					if (PRINT_TO_CONSOLE)
+						System.out.println("Login success - auth token received.");
+				}
+			}
+
+			if (parseAuthToken && this.authToken == null) {
+				throw new IOException("No Authorisation Received.");
+			}
+			
+			return bob.toString();
+		} finally {
+			if(wr != null) try { wr.close(); } catch(IOException ex) {}
+			if(rd != null) try { rd.close(); } catch(IOException ex) {}
+		}
 	}
 
 	/**

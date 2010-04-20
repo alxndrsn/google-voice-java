@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <json><![CDATA[{"messages":{"432958340a6359806d49802387c958675d986f34":{"id":"432958340a6359806d49802387c958675d986f34","phoneNumber":"+123456789","displayNumber":"+12 3456 789","startTime":"1271761022690","displayStartDateTime":"4/20/10 6:57 AM","displayStartTime":"6:57 AM","relativeStartTime":"2 minutes ago","note":"","isRead":false,"isSpam":false,"isTrash":false,"star":false,"labels":["inbox","unread","sms","all"],"type":11,"children":""}]]></json>
+  <html><![CDATA[
+  
+  
+  <div id="432958340a6359806d49802387c958675d986f34"
+     class="goog-flat-button gc-message gc-message-sms">
+     <div class="gc-message-bg">
+  <div>
+    <table class="gc-message-bg-top">
+      <tr>
+        <td class="gc-message-bg-f"></td>
+        <td class="gc-message-bg-tl"></td>
+        <td class="gc-message-bg-t"><div></div></td>
+        <td class="gc-message-bg-tr"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="gc-message-bg-msg">
+    <table class="gc-message-bg-middle">
+      <tr>
+        <td class="gc-message-bg-f">
+          <div style="position: relative; padding-left: 5px;">
+          <div class="goog-inline-block"><input type="checkbox" class="gc-message-checkbox"/></div>
+          </div>
+          <div style="position: relative;">
+            <div class="gc-message-bg-callout"></div>
+          </div>
+        </td>
+        <td class="gc-message-bg-l"></td>
+        <td class="gc-message-bg-m">
+          <div style="padding-bottom: 3px;">
+
+  <table style="width: 100%;">
+    <tr><td class="gc-sline-top"></td><td></td></tr>
+    <tr><td class="gc-message-sline"><span></span></td><td style="padding-left: 4px;">
+  <table class="gc-message-tbl">
+    <tr>
+      <td class="gc-message-tbl-portrait">
+        <div class="gc-message-portrait">
+        
+        <img alt="Blue_ghost" src="/voice/resources/1366864992-blue_ghost.jpg"/>
+        
+        <div class="gc-message-icon-11"></div>
+        </div>
+      </td>
+      <td class="gc-message-tbl-metadata">
+        <div>
+          <span class="gc-message-name">
+             
+               <span class="">Me</span>
+               <span class="gc-message-to">to</span>
+               
+                 <span class="gc-nobold" title="+12 3456 789">+12 3456 789</span>
+               
+             
+          </span>
+          
+          <span class="gc-message-add-contact">
+            <a href="javascript://">Add</a>
+            <div class="gc-quickadd-contents" style="display: none;">
+  <form action="" name="quickcadd" onsubmit="return false;">
+  <div class="gc-bubble-ih" style="margin-bottom: 3px;">
+    <span>Quick Add</span>
+    <span style="font-weight: normal;"></span>
+    <span style="color: #0f65bb; margin: 0 0 0 2px;">+12 3456 789</span>
+  </div>
+  <div class="gc-bubble-subg" style="font-size: 11px; margin-bottom: 3px; white-space: nowrap;">
+    Enter a new or existing contact name
+  </div>
+  <table class="gc-quickadd-inputs">
+  <tr>
+    <th>Name</th>
+    <td>
+      <input type="text" class="gc-text"/>
+    </td>
+  </tr>
+  <tr>
+    <th style="padding-top: 6px;">Type</th>
+    <td style="padding-top: 5px;">
+     <div>
+        <div class="goog-flat-menu-button gc-quickadd-phone-type">
+          <div class="goog-menu gc-simple-menu gc-phone-type-menu" style="z-index: 10001;">
+            <div class="goog-option goog-option-selected">Mobile</div>
+            <div class="goog-option">Work</div>
+            <div class="goog-option">Home</div>
+          </div>
+        </div>
+     </div>
+    </td>
+  </tr>
+  </table>
+  <div class="gc-quickadd-buttons">
+    <div class="goog-inline-block gc-quickadd-save">Create / Add</div>
+    <div style="display: none;" id="gc-qa-1271761022690" class="goog-inline-block gc-quickadd-msg"></div>
+  </div>
+  <div class="gc-quickadd-contacts" style="display: none;"></div>
+  </form>
+</div>
+            </span>
+            <span class="gc-message-location"></span>
+          
+        </div>
+        <div class="gc-message-time-row">
+          <span class="gc-message-time">4/20/10 6:57 AM</span>
+          <span class="gc-message-relative">2 minutes ago</span>
+          
+          
+        </div>
+      </td>
+      <td class="gc-message-tbl-actions">
+        <div class="gc-message-actions">
+          <div class="goog-inline-block" style="margin-bottom: -4px;"><div style="border-color: rgb(238, 238, 238); background-color: rgb(238, 238, 238);" class="gc-message-label"><div style="border-color: rgb(238, 238, 238);" class="gc-message-label-o"><div style="color: rgb(68, 68, 68);" class="gc-message-label-i">Inbox</div></div></div></div>
+          <div class="goog-inline-block goog-flat-button gc-message-star gc-message-star-off">&nbsp;</div>
+        </div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="4" class="gc-message-tbl-desc">
+          <div class="gc-message-transcript">
+            <div class="gc-message-transcript-msg">
+              <table class="gc-message-transcript-middle">
+                <tr>
+                  <td class="gc-message-transcript-l"></td>
+                  <td class="gc-message-transcript-m"><div>
+                    <div class="gc-message-player">
+                      
+                      <div class="gc-message-message-display">
+                        
+
+
+<div class="gc-message-sms-row">
+  <span class="gc-message-sms-from">
+    Me:
+  </span>
+  <span class="gc-message-sms-text">Hullo there alex.  just testing to see if SMS to UK numbers works.</span>
+  <span class="gc-message-sms-time"> 6:12 AM</span>
+</div>
+</div>
+
+
+<div class="gc-inbox-btm-paging">
+<div class="goog-inline-block gc-inbox-next">
+  <a href="javascript://" id="gc-inbox-next" class="gc-nobox">Next Page &raquo;</a>
+</div>
+</div>
+
+<div class="gc-footer-inbox">
+  
+
+<div class="gc-user-tip"><div class="goog-inline-block"><b>Tip:</b>
+  Get notified of new voicemails by SMS.
+  <a target="_blank" href="http://www.google.com/support/voice/bin/answer.py?hl=en&answer=117529">Learn more</a>
+  
+</div></div>
+
+  <div class="gc-footer">
+  &copy;2010 Google
+  - <a target="_blank" href="http://www.google.com/googlevoice/legal-notices.html">Terms</a>
+  - <a target="_blank" href="http://googlevoiceblog.blogspot.com/">Blog</a>
+  - <a target="_blank" href="http://www.google.com">Google Home</a>
+</div>
+</div>
+
+<div style="display: none;">
+<img alt="Callout_selected" src="/voice/resources/1487696585-callout_selected.gif"/><img alt="Tl_selected" src="/voice/resources/2635542038-tl_selected.gif"/><img alt="Top_selected" src="/voice/resources/367283939-top_selected.gif"/><img alt="Tr_selected" src="/voice/resources/2433887551-tr_selected.gif"/><img alt="Bl_selected" src="/voice/resources/3174837910-bl_selected.gif"/><img alt="Bottom_selected" src="/voice/resources/1834447710-bottom_selected.gif"/><img alt="Br_selected" src="/voice/resources/2110467394-br_selected.gif"/><img alt="Left_selected" src="/voice/resources/2503289043-left_selected.gif"/><img alt="Right_selected" src="/voice/resources/947660058-right_selected.gif"/></div>
+]]></html>
+</response>

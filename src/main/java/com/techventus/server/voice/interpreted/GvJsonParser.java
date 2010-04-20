@@ -7,6 +7,7 @@ import gvjava.org.json.JSONException;
 import gvjava.org.json.JSONObject;
 import gvjava.org.json.JSONTokener;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -43,7 +44,7 @@ public class GvJsonParser {
 	 * web service.
 	 */
 	List<GvSmsMessage> parseMessages(String jsonResponse) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO implement this
+		return Collections.emptyList();
 	}
 }

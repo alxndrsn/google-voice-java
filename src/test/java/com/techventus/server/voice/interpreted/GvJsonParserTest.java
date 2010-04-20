@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.techventus.server.voice;
+package com.techventus.server.voice.interpreted;
 
 import junit.framework.TestCase;
 import gvjava.org.json.JSONException;

@@ -16,6 +16,8 @@ import com.techventus.server.voice.Voice;
 public class InterpretedVoice {
 	/** {@link GvJsonParser} for this class */
 	private final GvJsonParser jsonParser = new GvJsonParser();
+	/** {@link GvJsonExtractor} for this class */
+	private final GvJsonExtractor jsonExtractor = new GvJsonExtractor();
 	/** Instance of {@link Voice} that this {@link InterpretedVoice} wraps. */
 	private final Voice voice;
 	
@@ -47,7 +49,8 @@ public class InterpretedVoice {
 	
 	public List<GvSmsMessage> receiveSms() throws GvSmsReceiveException {
 		try {
-			String jsonResponse = this.voice.getSMS();
+			String xmlResponse = this.voice.getSMS();
+			String jsonResponse = this.jsonExtractor.getJsonResponse(xmlResponse);
 			return jsonParser.parseMessages(jsonResponse);
 		} catch (IOException ex) {
 			throw new GvSmsReceiveException(ex);

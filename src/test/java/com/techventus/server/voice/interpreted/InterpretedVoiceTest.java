@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.techventus.server.voice;
+package com.techventus.server.voice.interpreted;
 
 /**
  * @author aga
